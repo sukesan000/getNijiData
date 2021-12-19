@@ -26,7 +26,7 @@ public class mainController {
         return "test";
     }
 
-    @Scheduled(cron = " 0 0 13 * * *", zone = "Asia/Tokyo")
+    @Scheduled(cron = " 0 0 0 * * *", zone = "Asia/Tokyo")
     public void main() throws IOException {
         List<Member> nameAndIdList= sService.getNameAndId();
         List<Channel> channelsList = sService.getMemberInfoFromYoutube(nameAndIdList);
